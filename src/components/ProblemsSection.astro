@@ -1,0 +1,201 @@
+---
+// src/components/ProblemsSection.astro
+---
+
+<section class="py-20 bg-slate-50 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <defs>
+                <pattern id="stress-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M20 20L30 10L20 0L10 10z" fill="currentColor" opacity="0.1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#stress-pattern)"/>
+        </svg>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-3 bg-red-50 border border-red-200 rounded-full px-6 py-3 mb-6">
+                    <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-semibold text-red-700 uppercase tracking-wide">La Realidad que Vives</span>
+                </div>
+                
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 mb-6 leading-tight">
+                    ¿Te sientes 
+                    <span class="relative">
+                        <span class="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">identificado</span>
+                        <div class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-red-600 to-red-500 rounded-full"></div>
+                    </span>
+                    <br>con estos síntomas?
+                </h2>
+                
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Miles de personas viven día a día con estos síntomas sin encontrar una solución real. 
+                    <strong class="text-slate-800">No estás solo en esta lucha.</strong>
+                </p>
+            </div>
+            
+            <!-- Problems Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Fatiga Constante -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-red-200 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-slate-800">Fatiga Constante</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Te levantas cansado y el agotamiento te acompaña todo el día, sin importar cuánto duermas. 
+                        <strong class="text-red-600">Es como si tu cuerpo no descansara nunca.</strong>
+                    </p>
+                </div>
+                
+                <!-- Aumento de Peso -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-red-200 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-slate-800">Aumento de Peso</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Subes de peso sin explicación y por más que hagas dieta, no logras los resultados esperados. 
+                        <strong class="text-orange-600">Tu metabolismo parece haberse detenido.</strong>
+                    </p>
+                </div>
+                
+                <!-- Niebla Mental -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-red-200 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-slate-800">Niebla Mental</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Sientes que tu mente no está clara, te cuesta concentrarte y recordar cosas importantes. 
+                        <strong class="text-purple-600">Como si vivieras en una nube.</strong>
+                    </p>
+                </div>
+                
+                <!-- Sensibilidad al Frío -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-red-200 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100-4m0 4v2m0-6V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-slate-800">Sensibilidad al Frío</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Tienes frío cuando otros no, tus manos y pies están siempre helados. 
+                        <strong class="text-blue-600">Tu termostato interno parece estar roto.</strong>
+                    </p>
+                </div>
+                
+                <!-- Ansiedad y Depresión -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-red-200 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-slate-800">Ansiedad y Depresión</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Tu estado de ánimo fluctúa, sientes ansiedad sin razón aparente o episodios depresivos. 
+                        <strong class="text-indigo-600">Tu bienestar emocional se ve afectado.</strong>
+                    </p>
+                </div>
+                
+                <!-- Frustración Médica -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl border border-slate-100 hover:border-red-200 transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4 text-slate-800">Frustración Médica</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        "Todo está normal" te dicen, pero tú sabes que algo no está bien en tu cuerpo. 
+                        <strong class="text-gray-600">Nadie parece entender lo que realmente te pasa.</strong>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Emotional Impact Section -->
+            <div class="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-500 rounded-2xl p-8 mb-12 relative overflow-hidden">
+                <!-- Background decoration -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-red-200 to-red-300 rounded-full opacity-10 transform translate-x-16 -translate-y-16"></div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-start gap-4 mb-6">
+                        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-2xl mb-4 text-red-800">La Realidad que Nadie te Cuenta:</h3>
+                            <p class="text-lg text-red-700 leading-relaxed mb-6">
+                                Estás <strong>cansado de sentirte mal</strong>, frustrado con la falta de resultados y 
+                                <strong>confundido con tanta información contradictoria</strong>. Has probado dietas, 
+                                suplementos, y diferentes médicos, pero sientes que nadie entiende realmente lo que te pasa.
+                            </p>
+                            
+                            <!-- Pain Points List -->
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                    <span class="text-red-700 font-medium">Información contradictoria en internet</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                    <span class="text-red-700 font-medium">Médicos que no te escuchan</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                    <span class="text-red-700 font-medium">Tratamientos que no funcionan</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                                    <span class="text-red-700 font-medium">Síntomas que empeoran con el tiempo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Transition to Solution -->
+            <div class="text-center">
+                <div class="relative inline-block">
+                    <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">
+                        ¿Y si te dijera que hay una manera de 
+                        <span class="bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">cambiar todo esto</span>?
+                    </h3>
+                    <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-green-600 to-green-500 rounded-full"></div>
+                </div>
+                
+                <p class="text-lg text-slate-600 mt-6 max-w-2xl mx-auto">
+                    Un método respaldado por la ciencia y la experiencia clínica que ya ha transformado la vida de 
+                    <strong class="text-slate-800">más de 500 personas</strong> como tú.
+                </p>
+                
+                <!-- Scroll hint -->
+                <div class="mt-12">
+                    <div class="inline-flex items-center gap-2 text-slate-500 text-sm">
+                        <span>Descubre la solución</span>
+                        <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,259 @@
+---
+// src/components/SolutionSection.astro
+---
+
+<section class="py-20 bg-white relative overflow-hidden">
+    <!-- Background Elements -->
+    <div class="absolute inset-0">
+        <!-- Gradient Orbs -->
+        <div class="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-100 to-green-100 rounded-full opacity-30 blur-3xl"></div>
+        <div class="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-green-100 to-blue-100 rounded-full opacity-20 blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-3 bg-green-50 border border-green-200 rounded-full px-6 py-3 mb-6">
+                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span class="text-sm font-semibold text-green-700 uppercase tracking-wide">La Solución Médica</span>
+                </div>
+                
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 mb-6 leading-tight">
+                    El <span class="bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 bg-clip-text text-transparent">Método Revolucionario</span>
+                    <br>que Estabas Buscando
+                </h2>
+                
+                <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                    Un sistema integral diseñado por un endocrinólogo especialista, basado en 
+                    <strong class="text-slate-800">evidencia científica</strong> y experiencia clínica real con 
+                    <strong class="text-green-600">más de 500 casos exitosos</strong>.
+                </p>
+            </div>
+            
+            <!-- Main Solution Content -->
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                
+                <!-- Content Side -->
+                <div class="order-2 lg:order-1">
+                    <!-- Method Badge -->
+                    <div class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full px-6 py-3 mb-8">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                        <span class="font-semibold">MÉTODO REVOLUCIONARIO</span>
+                    </div>
+                    
+                    <h3 class="text-3xl md:text-4xl font-black text-slate-800 mb-6 leading-tight">
+                        "Sana tu Tiroides en 5 Pasos"
+                    </h3>
+                    
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">
+                        No es otro curso basado en teorías de internet sin respaldo científico. 
+                        Es un <strong class="text-slate-800">sistema claro, médico y estructurado</strong> 
+                        para restablecer tu equilibrio hormonal y recuperar tu calidad de vida.
+                    </p>
+                    
+                    <!-- Key Differentiators -->
+                    <div class="space-y-6 mb-10">
+                        <div class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all duration-300">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Evidencia Científica</h4>
+                                <p class="text-slate-600">Cada estrategia está respaldada por estudios médicos y práctica clínica especializada en endocrinología.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all duration-300">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Aplicación Práctica</h4>
+                                <p class="text-slate-600">Herramientas que puedes usar desde casa, a tu ritmo, con seguimiento paso a paso.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all duration-300">
+                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">Resultados Reales</h4>
+                                <p class="text-slate-600">Sin promesas vacías, solo un método probado que ya ha transformado más de 500 vidas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <button class="group bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
+                        <span class="flex items-center gap-3">
+                            Conocer el Método Completo
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                
+                <!-- Visual Side -->
+                <div class="order-1 lg:order-2 relative">
+                    <!-- Main Method Visualization -->
+                    <div class="relative">
+                        <!-- Central Circle -->
+                        <div class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-50 to-green-50 rounded-full border-4 border-white shadow-2xl flex items-center justify-center relative overflow-hidden">
+                            <!-- Background Pattern -->
+                            <div class="absolute inset-0 opacity-10">
+                                <svg class="w-full h-full" viewBox="0 0 100 100">
+                                    <defs>
+                                        <pattern id="method-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                            <circle cx="10" cy="10" r="2" fill="currentColor"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect width="100%" height="100%" fill="url(#method-pattern)"/>
+                                </svg>
+                            </div>
+                            
+                            <!-- Center Content -->
+                            <div class="text-center relative z-10">
+                                <div class="w-20 h-20 bg-gradient-to-br from-blue-600 to-green-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </div>
+                                <h4 class="text-2xl font-bold text-slate-800 mb-2">Método Dr. Rawdy</h4>
+                                <p class="text-slate-600 text-sm">Endocrinólogo Especialista</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Step Cards -->
+                        <div class="absolute -top-8 -left-8 bg-white rounded-xl p-4 shadow-xl border-2 border-blue-100 transform -rotate-12 hover:rotate-0 transition-transform duration-300">
+                            <div class="text-center">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-white font-bold text-sm">1</span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-700">Diagnóstico</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -top-8 -right-8 bg-white rounded-xl p-4 shadow-xl border-2 border-green-100 transform rotate-12 hover:rotate-0 transition-transform duration-300">
+                            <div class="text-center">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-white font-bold text-sm">2</span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-700">Nutrición</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-8 -left-8 bg-white rounded-xl p-4 shadow-xl border-2 border-red-100 transform rotate-12 hover:rotate-0 transition-transform duration-300">
+                            <div class="text-center">
+                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-white font-bold text-sm">3</span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-700">Suplementos</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute -bottom-8 -right-8 bg-white rounded-xl p-4 shadow-xl border-2 border-purple-100 transform -rotate-12 hover:rotate-0 transition-transform duration-300">
+                            <div class="text-center">
+                                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-white font-bold text-sm">4</span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-700">Estilo de Vida</div>
+                            </div>
+                        </div>
+                        
+                        <div class="absolute top-1/2 -right-16 bg-white rounded-xl p-4 shadow-xl border-2 border-orange-100 transform -translate-y-1/2 hover:scale-110 transition-transform duration-300">
+                            <div class="text-center">
+                                <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-white font-bold text-sm">5</span>
+                                </div>
+                                <div class="text-xs font-semibold text-slate-700">Seguimiento</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- What Makes It Different -->
+            <div class="bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl p-12 mb-16">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                        ¿Qué lo hace <span class="text-blue-600">diferente</span>?
+                    </h3>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                        No es como otros cursos que encuentras online. Este método tiene características únicas.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- No teorías -->
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L5.636 5.636"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">NO son teorías</h4>
+                        <p class="text-slate-600 text-sm">Sin respaldo científico de internet</p>
+                    </div>
+                    
+                    <!-- No remedios rápidos -->
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">NO remedios rápidos</h4>
+                        <p class="text-slate-600 text-sm">Sin compromiso ni esfuerzo</p>
+                    </div>
+                    
+                    <!-- Sí evidencia -->
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">SÍ evidencia</h4>
+                        <p class="text-slate-600 text-sm">Ciencia y experiencia clínica</p>
+                    </div>
+                    
+                    <!-- Sí cambios reales -->
+                    <div class="text-center group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-bold text-lg text-slate-800 mb-2">SÍ cambios reales</h4>
+                        <p class="text-slate-600 text-sm">Para quienes quieren aplicar</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action Section -->
+            <div class="text-center bg-gradient-to-r from-blue-600 to-green-600 rounded-3xl p-12 text-white">
+                <h3 class="text-3xl md:text-4xl font-bold mb-6">
+                    Descubre Exactamente Cómo Funciona
+                </h3>
+                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                    Ve en detalle cada paso del método y cómo puede transformar tu salud tiroidea de forma definitiva.
+                </p>
+                <button class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transform hover:-translate-y-1 transition-all duration-300 shadow-xl">
+                    Ver el Método Completo Ahora
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

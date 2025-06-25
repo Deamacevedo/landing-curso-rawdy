@@ -1,0 +1,756 @@
+---
+// src/components/BonusesSection.astro - VERSIÓN ACTUALIZADA
+import { Image } from "astro:assets";
+import Bonus1 from "../assets/bonus1.jpg";
+import Bonus2 from "../assets/bonus2.jpg";
+import Bonus3 from "../assets/bonus3.jpg";
+import Bonus4 from "../assets/bonus4.jpg";
+---
+
+<section
+  class="py-20 bg-gradient-to-br from-blue-50 via-slate-50 to-green-50 relative overflow-hidden"
+>
+  <!-- Background Elements -->
+  <div class="absolute inset-0">
+    <!-- Medical Orbs -->
+    <div
+      class="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-blue-200 to-green-200 rounded-full opacity-20 blur-3xl animate-pulse"
+    >
+    </div>
+    <div
+      class="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-green-200 to-blue-200 rounded-full opacity-15 blur-3xl animate-pulse"
+      style="animation-delay: 3s;"
+    >
+    </div>
+  </div>
+
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <svg
+      class="w-full h-full"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 100 100"
+    >
+      <defs>
+        <pattern
+          id="bonus-pattern"
+          x="0"
+          y="0"
+          width="25"
+          height="25"
+          patternUnits="userSpaceOnUse"
+        >
+          <circle cx="12.5" cy="12.5" r="1.5" fill="currentColor"></circle>
+          <circle cx="6.25" cy="6.25" r="0.5" fill="currentColor"></circle>
+          <circle cx="18.75" cy="18.75" r="0.5" fill="currentColor"></circle>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#bonus-pattern)"></rect>
+    </svg>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <div
+          class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full px-8 py-4 mb-8 shadow-xl"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+            ></path>
+          </svg>
+          <span class="font-bold text-lg uppercase tracking-wide"
+            >Bonuses Exclusivos</span
+          >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+            ></path>
+          </svg>
+        </div>
+
+        <h2
+          class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 mb-6 leading-tight"
+        >
+          Pero eso <span
+            class="bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 bg-clip-text text-transparent"
+            >no es todo...</span
+          >
+          <br />Recibe También
+        </h2>
+
+        <p class="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          Además de los 9 módulos principales, incluimos estos <strong
+            class="text-slate-800">materiales exclusivos</strong
+          >
+          que complementan perfectamente tu transformación tiroidea.
+        </p>
+
+        <!-- Value Badge -->
+        <div
+          class="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-full px-6 py-3 mt-6 shadow-lg"
+        >
+          <span class="text-lg font-bold">INCLUIDOS SIN COSTO ADICIONAL</span>
+        </div>
+      </div>
+
+      <!-- Bonuses Grid -->
+      <div class="grid lg:grid-cols-2 gap-12 mb-16">
+        <!-- Bonus 1: Recetario Anti-inflamatorio -->
+        <div
+          class="group bg-white rounded-3xl overflow-hidden shadow-2xl border-4 border-blue-100 hover:border-blue-300 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-3xl"
+        >
+          <!-- Bonus Image -->
+          <div class="relative h-64 overflow-hidden">
+            <Image
+              src={Bonus1}
+              alt="Recetario Anti-inflamatorio para la Tiroides"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+            >
+            </div>
+
+            <!-- Badge -->
+            <div
+              class="absolute top-4 left-4 bg-blue-600 text-white rounded-full px-4 py-2"
+            >
+              <span class="font-bold text-sm uppercase tracking-wide"
+                >BONUS #1</span
+              >
+            </div>
+
+            <!-- Title Overlay -->
+            <!-- <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-2xl font-black mb-2">
+                Recetario Anti-inflamatorio
+              </h3>
+              <p class="text-sm opacity-90">
+                + Lista de Alimentos Pro-Tiroides
+              </p>
+            </div> -->
+          </div>
+
+          <!-- Bonus Content -->
+          <div class="p-8">
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              50+ recetas deliciosas y fáciles de preparar, específicamente
+              diseñadas para reducir la inflamación y optimizar tu función
+              tiroidea.
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >50 recetas categorizadas por comida</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Lista de alimentos pro-tiroides</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700">Guía de preparación meal prep</span
+                >
+              </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-2xl p-4 border border-blue-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <span class="font-semibold text-blue-800"
+                  >Formato especial:</span
+                >
+              </div>
+              <p class="text-sm text-blue-700">
+                PDF descargable + Videos de preparación
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bonus 2: Diario de Progreso -->
+        <div
+          class="group bg-white rounded-3xl overflow-hidden shadow-2xl border-4 border-green-100 hover:border-green-300 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-3xl"
+        >
+          <div class="relative h-64 overflow-hidden">
+            <Image
+              src={Bonus2}
+              alt="Diario Mensual de Progreso Tiroideo"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+            >
+            </div>
+
+            <div
+              class="absolute top-4 left-4 bg-green-600 text-white rounded-full px-4 py-2"
+            >
+              <span class="font-bold text-sm uppercase tracking-wide"
+                >BONUS #2</span
+              >
+            </div>
+
+            <!-- <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-2xl font-black mb-2">
+                Diario Mensual de Progreso
+              </h3>
+              <p class="text-sm opacity-90">Seguimiento Tiroideo Completo</p>
+            </div> -->
+          </div>
+
+          <div class="p-8">
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              Herramienta de seguimiento diseñada para monitorear tu evolución,
+              síntomas y identificar patrones de mejora mes a mes.
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Seguimiento de síntomas diarios</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Registro de alimentación y suplementos</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Espacio para análisis de laboratorio</span
+                >
+              </div>
+            </div>
+
+            <div class="bg-green-50 rounded-2xl p-4 border border-green-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H9a2 2 0 01-2-2z"
+                  ></path>
+                </svg>
+                <span class="font-semibold text-green-800">Incluye:</span>
+              </div>
+              <p class="text-sm text-green-700">
+                Versión digital + Plantilla imprimible
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Segunda Fila de Bonuses -->
+      <div class="grid lg:grid-cols-2 gap-12 mb-16">
+        <!-- Bonus 3: Guía para Mujeres -->
+        <div
+          class="group bg-white rounded-3xl overflow-hidden shadow-2xl border-4 border-blue-100 hover:border-blue-300 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-3xl"
+        >
+          <div class="relative h-64 overflow-hidden">
+            <Image
+              src={Bonus3}
+              alt="Guía Rápida para Mujeres con Hipotiroidismo y Ciclo Irregular"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+            >
+            </div>
+
+            <div
+              class="absolute top-4 left-4 bg-blue-600 text-white rounded-full px-4 py-2"
+            >
+              <span class="font-bold text-sm uppercase tracking-wide"
+                >BONUS #3</span
+              >
+            </div>
+
+            <!-- Special Badge -->
+            <div
+              class="absolute top-4 right-4 bg-red-500 text-white rounded-full px-3 py-1"
+            >
+              <span class="text-xs font-bold">SOLO MUJERES</span>
+            </div>
+
+            <!-- <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-2xl font-black mb-2">Guía Rápida para Mujeres</h3>
+              <p class="text-sm opacity-90">Hipotiroidismo y Ciclo Irregular</p>
+            </div> -->
+          </div>
+
+          <div class="p-8">
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              Protocolo específico para mujeres que sufren alteraciones del
+              ciclo menstrual debido a problemas tiroideos.
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Protocolo para regular el ciclo menstrual</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Manejo de síntomas premenstruales</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Suplementación específica por fase</span
+                >
+              </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-2xl p-4 border border-blue-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+                <span class="font-semibold text-blue-800">Exclusivo:</span>
+              </div>
+              <p class="text-sm text-blue-700">
+                Casos reales y protocolos específicos
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bonus 4: Ebook Hombres -->
+        <div
+          class="group bg-white rounded-3xl overflow-hidden shadow-2xl border-4 border-green-100 hover:border-green-300 transition-all duration-500 transform hover:-translate-y-3 hover:shadow-3xl"
+        >
+          <div class="relative h-64 overflow-hidden">
+            <Image
+              src={Bonus4}
+              alt="El Hipotiroidismo Silencioso en Hombres"
+              class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"
+            >
+            </div>
+
+            <div
+              class="absolute top-4 left-4 bg-green-600 text-white rounded-full px-4 py-2"
+            >
+              <span class="font-bold text-sm uppercase tracking-wide"
+                >BONUS #4</span
+              >
+            </div>
+
+            <!-- Special Badge -->
+            <div
+              class="absolute top-4 right-4 bg-slate-600 text-white rounded-full px-3 py-1"
+            >
+              <span class="text-xs font-bold">SOLO HOMBRES</span>
+            </div>
+
+            <!-- <div class="absolute bottom-4 left-4 right-4 text-white">
+              <h3 class="text-2xl font-black mb-2">
+                El Hipotiroidismo Silencioso
+              </h3>
+              <p class="text-sm opacity-90">en Hombres - Mini Ebook</p>
+            </div> -->
+          </div>
+
+          <div class="p-8">
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              Guía especializada que aborda cómo el hipotiroidismo afecta
+              específicamente a los hombres y sus síntomas únicos.
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700">Hipotiroidismo y testosterona</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700">Síntomas confundidos con edad</span
+                >
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div
+                  class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
+                >
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-slate-700"
+                  >Protocolo específico masculino</span
+                >
+              </div>
+            </div>
+
+            <div class="bg-green-50 rounded-2xl p-4 border border-green-200">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  ></path>
+                </svg>
+                <span class="font-semibold text-green-800">Formato:</span>
+              </div>
+              <p class="text-sm text-green-700">
+                PDF de 35 páginas con casos de estudio
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why These Bonuses Matter -->
+      <div
+        class="bg-white rounded-3xl p-12 shadow-2xl border-2 border-slate-100 mb-16"
+      >
+        <div class="text-center mb-12">
+          <h3 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+            ¿Por qué incluimos estos <span
+              class="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent"
+              >bonuses</span
+            >?
+          </h3>
+          <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+            Porque sabemos que la información sin herramientas prácticas no
+            genera resultados. Estos materiales están diseñados para <strong
+              class="text-slate-800">maximizar tu éxito</strong
+            >.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl text-slate-800 mb-3">
+              Implementación Inmediata
+            </h4>
+            <p class="text-slate-600">
+              No perderás tiempo pensando qué cocinar o cómo hacer seguimiento
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H9a2 2 0 01-2-2z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl text-slate-800 mb-3">
+              Seguimiento Efectivo
+            </h4>
+            <p class="text-slate-600">
+              Podrás medir tu progreso y ajustar el protocolo según tus
+              resultados
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h4 class="font-bold text-xl text-slate-800 mb-3">
+              Personalización Total
+            </h4>
+            <p class="text-slate-600">
+              Protocolos específicos para hombres y mujeres según sus
+              necesidades únicas
+            </p>
+          </div>
+        </div>
+      </div>
+
+           <!-- Final CTA -->
+      <div class="text-center">
+        <div
+          class="bg-gradient-to-r from-green-500 to-blue-500 rounded-3xl p-8 text-white inline-block shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+        >
+          <h3 class="text-2xl md:text-3xl font-bold mb-4">
+            Curso Completo + 4 Bonuses Exclusivos
+          </h3>
+          <p class="text-lg mb-6 opacity-90">
+            Todo lo que necesitas para transformar tu salud tiroidea
+          </p>
+          <button
+            class="bg-white text-green-600 px-8 py-4 rounded-full font-bold text-xl hover:bg-gray-50 transform hover:-translate-y-1 transition-all duration-300 shadow-xl"
+          >
+            Obtener Todo el Paquete Completo
+          </button>
+          <p class="text-sm opacity-80 mt-3">
+            Acceso instantáneo • Garantía incluida • Soporte técnico
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
