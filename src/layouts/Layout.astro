@@ -3,19 +3,219 @@ import "../styles/global.css"
 import '@fontsource-variable/montserrat';
 import '@fontsource-variable/roboto';
 
+export interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	canonical?: string;
+}
+
+const {
+	title = "Sana tu Tiroides en 5 Pasos - Dr. Rawdy Reales | Método Médico Comprobado",
+	description = "Descubre el método revolucionario del Dr. Rawdy Reales para sanar tu tiroides naturalmente. Más de 500 pacientes transformados. Sistema paso a paso basado en 15+ años de experiencia clínica. ¡Recupera tu energía y bienestar!",
+	image = "./og-image.jpg",
+	canonical = Astro.url.href
+} = Astro.props;
+
+const siteUrl = "https://aprendeconrawdy.com/cursotiroides/"; // Cambia por tu dominio real
+const fullImageUrl = new URL(image, siteUrl).href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
+		<!-- Meta básicos -->
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="./iconorawdy.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Sana tu Tiroides en 5 Pasos - Dr. Rawdy Reales</title>
+		
+		<!-- Título y descripción -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		
+		<!-- Canonical URL -->
+		<link rel="canonical" href={canonical} />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="./iconorawdy.png" />
+		<link rel="apple-touch-icon" href="./iconorawdy.png" />
+		
+		<!-- Preload crítico -->
+		<link rel="preload" href="/Portada.jpg" as="image" type="image/jpeg" />
+		<link rel="preload" href="/fotodoc.jpg" as="image" type="image/jpeg" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={fullImageUrl} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="Dr. Rawdy Reales - Especialista en Tiroides" />
+		<meta property="og:locale" content="es_ES" />
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonical} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={fullImageUrl} />
+		<meta name="twitter:creator" content="@drrawdyreales" />
+		
+		<!-- Keywords -->
+		<meta name="keywords" content="tiroides, hipotiroidismo, Dr. Rawdy Reales, endocrinólogo, medicina funcional, tratamiento natural tiroides, TSH, T3, T4, fatiga crónica, metabolismo lento, curso tiroides, sanación natural" />
+		
+		<!-- Robots -->
+		<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+		
+		<!-- Autor -->
+		<meta name="author" content="Dr. Rawdy Reales - Especialista en Medicina Interna y Endocrinología" />
+		
+		<!-- Tema de color para móviles -->
+		<meta name="theme-color" content="#2563eb" />
+		<meta name="msapplication-TileColor" content="#2563eb" />
+		
+		<!-- Para prevenir zoom en iOS -->
+		<meta name="format-detection" content="telephone=no" />
+		
+		<!-- DNS Prefetch para recursos externos -->
+		<link rel="dns-prefetch" href="//pay.hotmart.com" />
+		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+		
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Course",
+			"name": "Sana tu Tiroides en 5 Pasos",
+			"description": "Curso médico especializado para el tratamiento natural de problemas tiroideos, diseñado por el Dr. Rawdy Reales con más de 15 años de experiencia clínica.",
+			"provider": {
+				"@type": "Person",
+				"name": "Dr. Rawdy Reales",
+				"jobTitle": "Especialista en Medicina Interna y Endocrinología",
+				"description": "Médico especialista con más de 15 años de experiencia tratando trastornos tiroideos y metabólicos.",
+				"image": "./assets/fotodoc.jpg"
+			},
+			"offers": {
+				"@type": "Offer",
+				"price": "47",
+				"priceCurrency": "USD",
+				"availability": "https://schema.org/InStock",
+				"validFrom": "2024-01-01",
+				"url": "https://pay.hotmart.com/Q100407304I?off=vbp0omq5&checkoutMode=10&bid=1751054408566"
+			},
+			"courseMode": "online",
+			"educationalLevel": "Beginner to Intermediate",
+			"learningResourceType": "Course",
+			"inLanguage": "es",
+			"timeRequired": "PT9H",
+			"numberOfCredits": 9,
+			"coursePrerequisites": "Ninguno",
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.9",
+				"reviewCount": "500",
+				"bestRating": "5",
+				"worstRating": "1"
+			},
+			"review": [
+				{
+					"@type": "Review",
+					"reviewRating": {
+						"@type": "Rating",
+						"ratingValue": "5",
+						"bestRating": "5"
+					},
+					"author": {
+						"@type": "Person",
+						"name": "María González"
+					},
+					"reviewBody": "Excelente método, logré regular mi tiroides siguiendo el protocolo del Dr. Rawdy. Muy recomendado."
+				}
+			]
+		}
+		</script>
+		
+		<!-- Website Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Dr. Rawdy Reales - Sana tu Tiroides",
+			"url": "${siteUrl}",
+			"description": "Método médico especializado para sanar problemas de tiroides naturalmente",
+			"publisher": {
+				"@type": "Person",
+				"name": "Dr. Rawdy Reales"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": "${siteUrl}/search?q={search_term_string}",
+				"query-input": "required name=search_term_string"
+			}
+		}
+		</script>
+		
+		<!-- Medical Organization Schema -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "MedicalOrganization",
+			"name": "Dr. Rawdy Reales - Especialista en Tiroides",
+			"description": "Consulta médica especializada en trastornos tiroideos y medicina funcional",
+			"url": "${siteUrl}",
+			"logo": "/iconorawdy.png",
+			"image": "/fotodoc.jpg",
+			"medicalSpecialty": "Endocrinología",
+			"founder": {
+				"@type": "Person",
+				"name": "Dr. Rawdy Reales",
+				"jobTitle": "Especialista en Medicina Interna y Endocrinología"
+			}
+		}
+		</script>
+		
+		<!-- Google Analytics (reemplaza con tu ID) -->
+		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'GA_MEASUREMENT_ID');
+		</script> -->
+		
+		<!-- Facebook Pixel (reemplaza con tu ID) -->
+		<!-- <script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', 'YOUR_PIXEL_ID');
+			fbq('track', 'PageView');
+		</script>
+		<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+		/></noscript> -->
 	</head>
 	<body>
 		<slot />
+		
+		<!-- Hotjar Tracking (reemplaza con tu ID) -->
+		<!-- <script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script> -->
 	</body>
 </html>
 
@@ -27,5 +227,28 @@ import '@fontsource-variable/roboto';
 		height: 100%;
 		font-family: 'Roboto Variable', 'Montserrat Variable', sans-serif;
 		scroll-behavior: smooth;
+	}
+	
+	/* Mejoras de performance */
+	* {
+		box-sizing: border-box;
+	}
+	
+	/* Optimización de fuentes */
+	body {
+		font-display: swap;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+	}
+	
+	/* Preloader básico (opcional) */
+	.loading {
+		opacity: 0;
+		transition: opacity 0.3s ease-in-out;
+	}
+	
+	.loaded {
+		opacity: 1;
 	}
 </style>
