@@ -1,0 +1,346 @@
+---
+// src/components/FAQSection.astro
+---
+
+<section class="py-10 bg-gradient-to-br from-violet-50 via-rose-50 to-amber-50 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <defs>
+                <pattern id="faq-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="20" cy="20" r="2" fill="currentColor"/>
+                    <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                    <circle cx="30" cy="30" r="1" fill="currentColor"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#faq-pattern)"/>
+        </svg>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0">
+        <div class="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-violet-200 to-rose-200 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-br from-rose-200 to-amber-200 rounded-full opacity-15 blur-3xl animate-pulse" style="animation-delay: 3s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-full px-6 py-3 mb-6">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="font-bold uppercase tracking-wide">Preguntas Frecuentes</span>
+                </div>
+                
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 mb-6 leading-tight">
+                    ¿Tienes <span class="text-blue-800">Dudas</span>?
+                    <br>Las Resolvemos
+                </h2>
+                
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Estas son las preguntas más comunes que recibo sobre el método 
+                    <strong class="text-slate-800">"Sana tu Tiroides en 5 Pasos"</strong>
+                </p>
+            </div>
+            
+            <!-- FAQ Items -->
+            <div class="space-y-6">
+                
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-blue-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿Realmente funciona este método si ya he probado muchas cosas sin éxito?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-blue-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                Entiendo tu frustración completamente. La diferencia principal es que este método <strong>no es otro remedio rápido</strong>. 
+                                Está basado en más de 15 años de experiencia clínica tratando específicamente problemas tiroideos.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                Mientras otros enfoques se centran en síntomas aislados, este sistema ataca las <strong>causas raíz</strong> 
+                                del desequilibrio tiroideo: inflamación, deficiencias nutricionales, estrés crónico y disbiosis intestinal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-green-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-green-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿Puedo seguir el método si ya estoy tomando levotiroxina u otros medicamentos?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-green-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                <strong>Absolutamente sí.</strong> Este método está diseñado para <strong>complementar</strong> tu tratamiento médico actual, 
+                                no para reemplazarlo. Nunca te sugiero dejar tu medicación sin supervisión médica.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                De hecho, muchos de mis pacientes han logrado <strong>mejorar su respuesta</strong> al tratamiento farmacológico 
+                                cuando implementan los cambios nutricionales y de estilo de vida que enseño en el curso.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-blue-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿Cuánto tiempo toma ver resultados con este método?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-blue-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                Los primeros cambios suelen notarse en las <strong>primeras 2-3 semanas</strong>: más energía, mejor digestión, 
+                                sueño más reparador. Los cambios hormonales más profundos toman entre <strong>2-3 meses</strong>.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                Cada persona es diferente, pero la mayoría de mis pacientes reportan mejoras significativas 
+                                en el <strong>primer mes</strong> de implementar el protocolo completo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-green-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-green-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿Es seguro seguir estas recomendaciones sin supervisión médica directa?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-green-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                Todas las recomendaciones del curso están basadas en <strong>evidencia científica</strong> y son cambios 
+                                de estilo de vida y nutrición, no tratamientos médicos invasivos.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                Sin embargo, siempre recomiendo mantener comunicación con tu médico tratante, especialmente 
+                                si estás tomando medicamentos, para que pueda <strong>monitorear tu progreso</strong> y ajustar dosis si es necesario.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-blue-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿Qué pasa si compro el curso y no me funciona?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-blue-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                Tienes <strong>30 días completos</strong> para probar el método. Si sigues las recomendaciones 
+                                al pie de la letra y no ves ninguna mejora en tus síntomas, te devuelvo el 100% de tu dinero.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                <strong>Sin preguntas, sin complicaciones.</strong> Solo necesitas escribirme un email explicando 
+                                que aplicaste el protocolo y no funcionó para ti.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 6 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-green-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-green-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿Necesito comprar suplementos caros o productos especiales?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-green-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                <strong>No.</strong> El 80% de las mejoras vienen de cambios en alimentación y estilo de vida que 
+                                no requieren productos costosos. Cuando menciono suplementos, son opciones <strong>básicas y accesibles</strong>.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                Te enseño exactamente qué buscar, en qué dosis, y cómo elegir opciones de calidad 
+                                sin pagar precios inflados. <strong>No vendo suplementos ni tengo comisiones</strong> con ninguna marca.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 7 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-blue-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-blue-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿El método funciona tanto para hipotiroidismo como para hipertiroidismo?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-blue-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                El curso está <strong>principalmente enfocado en hipotiroidismo</strong>, que es el trastorno tiroideo más común 
+                                (afecta al 90% de los casos). Sin embargo, muchos principios aplican para ambas condiciones.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                Si tienes hipertiroidismo, te recomiendo consultarlo con tu endocrinólogo antes de implementar 
+                                los cambios, ya que algunos aspectos nutricionales pueden <strong>requerir adaptaciones específicas</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ 8 -->
+                <div class="faq-item bg-white rounded-2xl shadow-lg border-2 border-slate-100 hover:border-green-200 overflow-hidden transition-all duration-300">
+                    <button class="faq-button w-full p-8 text-left flex items-center justify-between hover:bg-green-50 transition-colors">
+                        <h3 class="text-xl font-bold text-slate-800 pr-4">
+                            ¿Cómo accedo al curso después de comprarlo?
+                        </h3>
+                        <div class="faq-icon flex-shrink-0">
+                            <svg class="w-6 h-6 text-green-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content hidden">
+                        <div class="px-8 pb-8 bg-green-50">
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                El acceso es <strong>inmediato</strong>. Después de completar tu compra, recibes un email con 
+                                tus datos de acceso a la plataforma del curso en menos de 2 minutos.
+                            </p>
+                            <p class="text-slate-600 leading-relaxed">
+                                Puedes ver el contenido desde cualquier dispositivo (celular, tablet, computadora) 
+                                las 24 horas del día, <strong>de por vida</strong>. No hay restricciones de tiempo ni descargas limitadas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Still Have Questions CTA -->
+            <div class="mt-16 text-center">
+                <div class="bg-gradient-to-r from-blue-600 to-green-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                    <!-- Background decoration -->
+                    <div class="absolute top-4 right-4 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+                    <div class="absolute bottom-4 left-4 w-16 h-16 bg-white/10 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">¿Tienes una pregunta específica?</h3>
+                        <p class="text-lg mb-6 opacity-90">
+                            Si no encontraste la respuesta que buscabas, accede al curso ahora y obtén respuestas personalizadas
+                        </p>
+                        <a href="https://pay.hotmart.com/Q100407304I?off=vbp0omq5&checkoutMode=10&bid=1751054408566" target="_blank" rel="noopener noreferrer" class="group relative inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 shadow-xl overflow-hidden">
+                            <!-- Shimmer Effect -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-blue-100 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                            
+                            <!-- Glow Effect -->
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                            
+                            <span class="relative z-10 flex items-center gap-3">
+                                🚀 Acceder al Curso Ahora
+                                <svg class="w-5 h-5 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </span>
+                            
+                            <!-- Floating particles effect -->
+                            <div class="absolute inset-0 pointer-events-none">
+                                <div class="absolute top-2 left-4 w-1 h-1 bg-blue-400 rounded-full opacity-60 animate-ping" style="animation-delay: 0.5s;"></div>
+                                <div class="absolute top-3 right-6 w-1 h-1 bg-green-400 rounded-full opacity-40 animate-ping" style="animation-delay: 1s;"></div>
+                                <div class="absolute bottom-2 left-6 w-1 h-1 bg-blue-400 rounded-full opacity-50 animate-ping" style="animation-delay: 1.5s;"></div>
+                            </div>
+                        </a>
+                        <p class="text-sm opacity-80 mt-3">
+                            • Acceso inmediato •
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    // FAQ Accordion functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const button = item.querySelector('.faq-button');
+            const content = item.querySelector('.faq-content');
+            const icon = item.querySelector('.faq-icon svg');
+            
+            button.addEventListener('click', function() {
+                const isOpen = !content.classList.contains('hidden');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    const otherContent = otherItem.querySelector('.faq-content');
+                    const otherIcon = otherItem.querySelector('.faq-icon svg');
+                    if (otherItem !== item) {
+                        otherContent.classList.add('hidden');
+                        otherIcon.style.transform = 'rotate(0deg)';
+                        otherItem.classList.remove('border-blue-300', 'border-green-300');
+                    }
+                });
+                
+                // Toggle current item
+                if (isOpen) {
+                    content.classList.add('hidden');
+                    icon.style.transform = 'rotate(0deg)';
+                    item.classList.remove('border-blue-300', 'border-green-300');
+                } else {
+                    content.classList.remove('hidden');
+                    icon.style.transform = 'rotate(180deg)';
+                    // Alternate border colors
+                    if (icon.classList.contains('text-blue-600')) {
+                        item.classList.add('border-blue-300');
+                    } else {
+                        item.classList.add('border-green-300');
+                    }
+                }
+            });
+        });
+    });
+</script>

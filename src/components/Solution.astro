@@ -2,7 +2,7 @@
 // src/components/SolutionSection.astro
 ---
 
-<section class="py-20 bg-white relative overflow-hidden">
+<section class="py-10 bg-white relative overflow-hidden">
     <!-- Background Elements -->
     <div class="absolute inset-0">
         <!-- Gradient Orbs -->
@@ -15,13 +15,9 @@
             
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <div class="inline-flex items-center gap-3 bg-green-50 border border-green-200 rounded-full px-6 py-3 mb-6">
-                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span class="text-sm font-semibold text-green-700 uppercase tracking-wide">La Solución Médica</span>
-                </div>
                 
                 <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-800 mb-6 leading-tight">
-                    El <span class="bg-gradient-to-r from-blue-600 via-green-600 to-blue-700 bg-clip-text text-transparent">Método Revolucionario</span>
+                    El <span class=" text-blue-800 bg-clip-text">Método Revolucionario</span>
                     <br>que Estabas Buscando
                 </h2>
                 
@@ -82,7 +78,7 @@
                         </div>
                         
                         <div class="group flex items-start gap-4 p-4 rounded-2xl hover:bg-slate-50 transition-all duration-300">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
@@ -95,14 +91,27 @@
                     </div>
                     
                     <!-- CTA Button -->
-                    <button class="group bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-                        <span class="flex items-center gap-3">
-                            Conocer el Método Completo
-                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <a href="https://pay.hotmart.com/Q100407304I?off=vbp0omq5&checkoutMode=10&bid=1751054408566" target="_blank" rel="noopener noreferrer" class="group relative inline-block bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 animate-pulse hover:animate-none overflow-hidden">
+                        <!-- Shimmer Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                        
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-green-400 rounded-full opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                        
+                        <span class="relative flex items-center gap-3 z-10">
+                             Transformar Mi Tiroides Ahora
+                            <svg class="w-5 h-5 group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                             </svg>
                         </span>
-                    </button>
+                        
+                        <!-- Floating particles effect -->
+                        <div class="absolute inset-0 pointer-events-none">
+                            <div class="absolute top-2 left-4 w-1 h-1 bg-white rounded-full opacity-60 animate-ping" style="animation-delay: 0.5s;"></div>
+                            <div class="absolute top-3 right-6 w-1 h-1 bg-white rounded-full opacity-40 animate-ping" style="animation-delay: 1s;"></div>
+                            <div class="absolute bottom-2 left-6 w-1 h-1 bg-white rounded-full opacity-50 animate-ping" style="animation-delay: 1.5s;"></div>
+                        </div>
+                    </a>
                 </div>
                 
                 <!-- Visual Side -->
@@ -154,27 +163,27 @@
                             </div>
                         </div>
                         
-                        <div class="absolute -bottom-8 -left-8 bg-white rounded-xl p-4 shadow-xl border-2 border-red-100 transform rotate-12 hover:rotate-0 transition-transform duration-300">
+                        <div class="absolute -bottom-8 -left-8 bg-white rounded-xl p-4 shadow-xl border-2 border-blue-100 transform rotate-12 hover:rotate-0 transition-transform duration-300">
                             <div class="text-center">
-                                <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-2">
                                     <span class="text-white font-bold text-sm">3</span>
                                 </div>
                                 <div class="text-xs font-semibold text-slate-700">Suplementos</div>
                             </div>
                         </div>
                         
-                        <div class="absolute -bottom-8 -right-8 bg-white rounded-xl p-4 shadow-xl border-2 border-purple-100 transform -rotate-12 hover:rotate-0 transition-transform duration-300">
+                        <div class="absolute -bottom-8 -right-8 bg-white rounded-xl p-4 shadow-xl border-2 border-green-100 transform -rotate-12 hover:rotate-0 transition-transform duration-300">
                             <div class="text-center">
-                                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-2">
                                     <span class="text-white font-bold text-sm">4</span>
                                 </div>
                                 <div class="text-xs font-semibold text-slate-700">Estilo de Vida</div>
                             </div>
                         </div>
                         
-                        <div class="absolute top-1/2 -right-16 bg-white rounded-xl p-4 shadow-xl border-2 border-orange-100 transform -translate-y-1/2 hover:scale-110 transition-transform duration-300">
+                        <div class="absolute top-1/2 -right-16 bg-white rounded-xl p-4 shadow-xl border-2 border-blue-100 transform -translate-y-1/2 hover:scale-110 transition-transform duration-300">
                             <div class="text-center">
-                                <div class="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-2">
                                     <span class="text-white font-bold text-sm">5</span>
                                 </div>
                                 <div class="text-xs font-semibold text-slate-700">Seguimiento</div>
@@ -198,7 +207,7 @@
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- No teorías -->
                     <div class="text-center group">
-                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L5.636 5.636"/>
                             </svg>
@@ -209,7 +218,7 @@
                     
                     <!-- No remedios rápidos -->
                     <div class="text-center group">
-                        <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                             </svg>
@@ -220,7 +229,7 @@
                     
                     <!-- Sí evidencia -->
                     <div class="text-center group">
-                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                             </svg>
@@ -231,7 +240,7 @@
                     
                     <!-- Sí cambios reales -->
                     <div class="text-center group">
-                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                             </svg>
@@ -243,16 +252,41 @@
             </div>
             
             <!-- Call to Action Section -->
-            <div class="text-center bg-gradient-to-r from-blue-600 to-green-600 rounded-3xl p-12 text-white">
-                <h3 class="text-3xl md:text-4xl font-bold mb-6">
-                    Descubre Exactamente Cómo Funciona
-                </h3>
-                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                    Ve en detalle cada paso del método y cómo puede transformar tu salud tiroidea de forma definitiva.
-                </p>
-                <button class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transform hover:-translate-y-1 transition-all duration-300 shadow-xl">
-                    Ver el Método Completo Ahora
-                </button>
+            <div class="text-center bg-gradient-to-r from-blue-600 to-green-600 rounded-3xl p-12 text-white relative overflow-hidden">
+                <!-- Background Animation -->
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-700 to-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Floating Background Elements -->
+                <div class="absolute top-4 left-4 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-4 right-4 w-16 h-16 bg-white/10 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+                <div class="absolute top-1/2 left-8 w-12 h-12 bg-white/10 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+                
+                <div class="relative z-10">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6">
+                        Descubre Exactamente Cómo Funciona
+                    </h3>
+                    <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                        Ve en detalle cada paso del método y cómo puede transformar tu salud tiroidea de forma definitiva.
+                    </p>
+                    <a href="https://pay.hotmart.com/Q100407304I?off=vbp0omq5&checkoutMode=10&bid=1751054408566" target="_blank" rel="noopener noreferrer" class="group relative inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 shadow-xl hover:shadow-2xl overflow-hidden">
+                        <!-- Ripple Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-100 to-green-100 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-500 opacity-50"></div>
+                        
+                        <!-- Shine Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+                        
+                        <span class="relative z-10 flex items-center gap-3">
+                             Ver el Método Completo Ahora
+                            <svg class="w-5 h-5 group-hover:translate-x-2 group-hover:rotate-12 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                            </svg>
+                        </span>
+                        
+                        <!-- Corner sparkles -->
+                        <div class="absolute top-1 right-2 w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 animate-ping transition-opacity duration-300"></div>
+                        <div class="absolute bottom-1 left-2 w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 animate-ping transition-opacity duration-300" style="animation-delay: 0.3s;"></div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
